@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../I2C_Reader.srcs/sim_1/new/I2C_TOP_LEVEL.v" \
+
+sv xil_defaultlib  \
+"../../../../I2C_Reader.srcs/sources_1/new/I2C_FSM.v" \
+"../../../../I2C_Reader.srcs/sources_1/new/I2C_peripheral.v" \
+"../../../../../Lab5/Lab5.srcs/sources_1/new/Lab_5_4_bit_register.sv" \
+"../../../../I2C_Reader.srcs/sim_1/new/I2C_Testbench.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
